@@ -27,6 +27,8 @@ namespace BirdAndTrains
             if(trainspeed==0|| trainspeed<0|| birdspeed==0|| birdspeed<0|| distance==0|| distance<0)
             {
                 Console.WriteLine("Please enter valid values");
+                Console.WriteLine();
+                Console.ReadKey();
             }
             else
             {
