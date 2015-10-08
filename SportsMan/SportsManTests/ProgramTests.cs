@@ -23,7 +23,14 @@ namespace SportsMan.Tests
         public void MainTest1()
         {
             int N = 5;
-            Assert.AreEqual(5,(int)N);
+            Assert.AreEqual(5, (int)N);
+        }
+
+        [TestMethod()]
+        public void MainTest2()
+        {
+            int N = 2;
+            Assert.AreEqual(true, N>0);
         }
     }
 }
