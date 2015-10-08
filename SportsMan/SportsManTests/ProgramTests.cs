@@ -22,7 +22,7 @@ namespace SportsMan.Tests
         [TestMethod()]
         public void MainTest1()
         {
-            int N = 5;
+            float N = 5;
             Assert.AreEqual(5, (int)N);
         }
 
@@ -30,7 +30,8 @@ namespace SportsMan.Tests
         public void MainTest2()
         {
             int N = 2;
-            Assert.AreEqual(true, N>0);
+            Assert.AreEqual(true, N > 0);
+        }
+
         }
     }
-}
