@@ -10,21 +10,27 @@ namespace SportsMan
     {
         public static void Main(string[] args)
         {
-            int N;
-            int x;
+            double N = 0;
+            double x;
 
             Console.WriteLine("Enter the numeber of reps rounds N=");
-            N = int.Parse(Console.ReadLine());
-           
-          
-                x = (int)Math.Pow(N, 2);
-                Console.WriteLine("Total number of reps is" + x);
-          
-                //Console.WriteLine("The number is not integer");
-           
-           
-          
-               
+            if (double.TryParse(Console.ReadLine(), out N))
+            {
+                if (N == (int)N)
+                {
+                    x = Math.Pow(N, 2);
+                    Console.WriteLine("Total number of reps is" + x);
+                }
+                else
+                {
+                    Console.WriteLine("The number is not integer");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Is not a numeber");
+            }
+            
             Console.WriteLine();
             Console.ReadKey();
         }
