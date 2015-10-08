@@ -10,6 +10,7 @@ namespace SportsMan
     {
         public static void Main(string[] args)
         {
+
             double N = 0;
             double x;
 
