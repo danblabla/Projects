@@ -10,21 +10,21 @@ namespace BirdAndTrains
     {
         public static void Main(string[] args)
         {
-            double birdspeed;
-            double trainspeed;
-            double distance;
-            double birddistance;
+            float birdspeed;
+            float trainspeed;
+            float distance;
+            float birddistance;
 
             Console.WriteLine("Enter trains speed=");
-            trainspeed = double.Parse(Console.ReadLine());
+            trainspeed = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter bird speed=");
-            birdspeed = double.Parse(Console.ReadLine());
+            birdspeed = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter inistial distance=");
-            distance = double.Parse(Console.ReadLine());
+            distance = float.Parse(Console.ReadLine());
 
-            if(trainspeed==0|| trainspeed<0|| birdspeed==0|| birdspeed<0|| distance==0|| distance<0)
+            if(trainspeed<=0|| birdspeed<=0|| distance<=0)
             {
                 Console.WriteLine("Please enter valid values");
                 Console.WriteLine();
@@ -32,7 +32,10 @@ namespace BirdAndTrains
             }
             else
             {
-
+                birddistance = (float)(0.5 * distance * (trainspeed + birdspeed) / 2 * trainspeed)/100;
+                Console.WriteLine("Total distance for bird " + birddistance);
+                Console.WriteLine();
+                Console.ReadKey();
             }
         }
     }
