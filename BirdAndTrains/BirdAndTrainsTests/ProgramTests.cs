@@ -43,7 +43,17 @@ namespace BirdAndTrains.Tests
         public void MainTestStringInput()
         {
             string[] s = { "a" };
-            Assert.AreEqual(true, s[0]=="a");
+            Assert.AreEqual(true, s[0] == "a");
+        }
+
+        [TestMethod()]
+        public void MainTestBirddistanceCalc()
+        {
+            float birdspeed = 20;
+            float trainspeed = 10;
+            float distance = 100;
+            
+            Assert.AreEqual(75, (float)(0.5 * distance * (trainspeed + birdspeed) / 2 * trainspeed) / 100);
         }
     }
 }
